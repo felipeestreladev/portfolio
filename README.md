@@ -2,7 +2,7 @@
 
 [Ler em português](README.pt-BR.md)
 
-Personal portfolio of **Felipe Estrela**, a full stack developer from Toledo, Paraná, Brazil. It is a single page site built with **Next.js**, with a brutalist look: black, off-white and lime green, giant type, right angles everywhere and animation driven by **GSAP** and **Motion**.
+Personal portfolio of **Felipe Estrela**, a full stack developer from Toledo, Paraná, Brazil. It is a single page site built with **Next.js**, with a bold, poster-like look: black, off-white and lime green, giant type, right angles everywhere and animation driven by **GSAP** and **Motion**.
 
 Live at [felipeestrela.com.br](https://felipeestrela.com.br).
 
@@ -23,7 +23,7 @@ Live at [felipeestrela.com.br](https://felipeestrela.com.br).
 
 ## Design concept
 
-**Brutalist poster.** The site avoids the usual portfolio patterns and bets on contrast and scale:
+**Poster style.** The site avoids the usual portfolio patterns and bets on contrast and scale:
 
 - A three color palette: black `#0B0B0B`, off-white `#F4F4EE` and lime green `#C8FF00`.
 - **No rounded corners at all.** Everything is square, with 3 px borders and hard offset shadows.
