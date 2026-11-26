@@ -7,18 +7,26 @@ const display = Anton({ weight: "400", subsets: ["latin"], variable: "--font-dis
 const mono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-mono", display: "swap" });
 const body = Archivo({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
+// Previa de link (WhatsApp, Discord, etc.) sempre em ingles, com o banner de opengraph-image.tsx.
 export const metadata: Metadata = {
+  metadataBase: new URL("https://felipeestrela.com.br"),
   title: CONTENT.pt.meta.title,
   description: CONTENT.pt.meta.description,
   authors: [{ name: "Felipe Estrela" }],
   openGraph: {
-    title: CONTENT.pt.meta.title,
-    description: CONTENT.pt.meta.description,
+    title: CONTENT.en.meta.title,
+    description: CONTENT.en.meta.description,
+    siteName: "Felipe Estrela",
+    url: "/",
     type: "website",
-    locale: "pt_BR",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: CONTENT.en.meta.title,
+    description: CONTENT.en.meta.description,
   },
 };
-
 export const viewport: Viewport = {
   themeColor: "#0b0b0b",
   colorScheme: "dark",

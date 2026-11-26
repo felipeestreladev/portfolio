@@ -67,7 +67,7 @@ Pensado para rodar em [felipeestrela.com.br](https://felipeestrela.com.br).
 │   ├── app/
 │   │   ├── api/status/      rota que verifica se os projetos estão no ar
 │   │   ├── globals.css      tokens de design e estilo de todos os componentes
-│   │   ├── icon.svg         favicon (F e </>)
+│   │   ├── icon.svg         favicon (símbolo </>)
 │   │   ├── layout.tsx       fontes, metadados e layout raiz
 │   │   └── page.tsx         página única
 │   ├── components/

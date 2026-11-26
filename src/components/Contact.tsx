@@ -103,11 +103,12 @@ export function Contact({ t }: { t: Dict }) {
       if (!LINKS.email) return;
       setOpening(true);
       const subject = encodeURIComponent(`${f.subject}: ${name.trim()}`);
-      const body = encodeURIComponent(`${message.trim()}\n\n${name.trim()}\n${email.trim()}`);
+      const hello = f.greeting.replace("{name}", name.trim());
+      const body = encodeURIComponent(`${hello}\n\n${message.trim()}\n\n${email.trim()}`);
       window.location.href = `mailto:${LINKS.email}?subject=${subject}&body=${body}`;
     } else {
       setOpening(true);
-      const text = encodeURIComponent(`${f.greeting}\n\n${message.trim()}\n\n${name.trim()}`);
+      const text = encodeURIComponent(`${f.greeting.replace("{name}", name.trim())}\n\n${message.trim()}`);
       window.open(`${LINKS.whatsapp}?text=${text}`, "_blank", "noopener,noreferrer");
     }
     window.setTimeout(() => setOpening(false), 4000);

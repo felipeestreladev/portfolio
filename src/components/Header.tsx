@@ -47,8 +47,11 @@ export function Header({ t, lang, onLang, ready }: { t: Dict; lang: Lang; onLang
       >
         <a className="hdr__logo" href="#inicio" aria-label="Felipe Estrela">
           <span className="hdr__mark" aria-hidden="true">
-            <b>F</b>
-            <i>{"</>"}</i>
+            <svg viewBox="0 0 48 28" width="34" height="20" fill="none" stroke="currentColor" strokeWidth="5.4" strokeLinecap="butt" strokeLinejoin="miter">
+              <path d="M15 4L5 14l10 10" />
+              <path d="M29 2L20 26" />
+              <path d="M33 4l10 10-10 10" />
+            </svg>
           </span>
           <span className="hdr__name mono">Felipe Estrela</span>
         </a>

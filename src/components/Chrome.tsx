@@ -58,7 +58,7 @@ export function Preloader({ label, onDone }: { label: string; onDone: () => void
       </div>
       <div className="pre__content">
         <div className="pre__top mono">
-          <span className="pre__mask"><span className="pre__word">{"F</>"}</span></span>
+          <span className="pre__mask"><span className="pre__word">{"</>"}</span></span>
           <span className="pre__mask"><span className="pre__word">{label}</span></span>
         </div>
         <div className="pre__bottom">
