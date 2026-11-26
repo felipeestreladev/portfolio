@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import type { Dict, Lang } from "@/lib/content";
 import { SquareButton } from "./ui";
 
@@ -92,6 +92,19 @@ export function Projects({ t, lang }: { t: Dict; lang: Lang }) {
           },
         });
 
+        // Fontes, status e imagens mudam a altura da pagina depois de o pin ser medido.
+        // Sem remedir, o pin fica fora de posicao e a secao aparece vazia.
+        let pending: gsap.core.Tween | null = null;
+        const kick = () => {
+          pending?.kill();
+          pending = gsap.delayedCall(0.2, () => ScrollTrigger.refresh());
+        };
+        const ro = new ResizeObserver(kick);
+        ro.observe(document.documentElement);
+        ro.observe(el);
+        document.fonts?.ready.then(kick);
+        window.addEventListener("load", kick);
+
         gsap.utils.toArray<HTMLElement>(".proj__name").forEach((n) => {
           gsap.fromTo(
             n,
@@ -103,6 +116,12 @@ export function Projects({ t, lang }: { t: Dict; lang: Lang }) {
             },
           );
         });
+
+        return () => {
+          ro.disconnect();
+          pending?.kill();
+          window.removeEventListener("load", kick);
+        };
       });
     },
     { scope: root, dependencies: [lang] },
