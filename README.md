@@ -1,99 +1,100 @@
-# Portfólio de Felipe Estrela
+# Felipe Estrela, Portfolio
 
-Portfólio pessoal de **Felipe Estrela**, desenvolvedor full stack de Toledo, Paraná, Brasil. Um site de página única em **Next.js**, com visual brutalista em preto, off-white e verde limão, tipografia gigante, ângulos retos em tudo e animações com **GSAP** e **Motion**.
+[Ler em português](README.pt-BR.md)
 
-Pensado para rodar em [felipeestrela.com.br](https://felipeestrela.com.br).
+Personal portfolio of **Felipe Estrela**, a full stack developer from Toledo, Paraná, Brazil. It is a single page site built with **Next.js**, with a brutalist look: black, off-white and lime green, giant type, right angles everywhere and animation driven by **GSAP** and **Motion**.
 
-> English summary: a single page personal portfolio built with Next.js 16, React 19, TypeScript, GSAP and Motion. Brutalist black, white and lime design with zero rounded corners, three languages (Portuguese, English and Spanish), a live project status check through an API route and a contact form that sends by email or WhatsApp.
+Live at [felipeestrela.com.br](https://felipeestrela.com.br).
 
-## Sumário
+## Table of contents
 
-- [Conceito de design](#conceito-de-design)
-- [Recursos](#recursos)
-- [Tecnologias](#tecnologias)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Como rodar](#como-rodar)
-- [Variáveis de ambiente](#variáveis-de-ambiente)
+- [Design concept](#design-concept)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Project structure](#project-structure)
+- [Getting started](#getting-started)
+- [Environment variables](#environment-variables)
 - [Scripts](#scripts)
-- [Como funciona por dentro](#como-funciona-por-dentro)
-- [Personalização](#personalização)
-- [Publicação](#publicação)
-- [Acessibilidade e desempenho](#acessibilidade-e-desempenho)
-- [Licença e contato](#licença-e-contato)
+- [How it works](#how-it-works)
+- [Customizing](#customizing)
+- [Deployment](#deployment)
+- [Accessibility and performance](#accessibility-and-performance)
+- [License and contact](#license-and-contact)
 
-## Conceito de design
+## Design concept
 
-**Pôster brutalista.** O site foge dos padrões comuns de portfólio e aposta em contraste e escala:
+**Brutalist poster.** The site avoids the usual portfolio patterns and bets on contrast and scale:
 
-- Paleta de três cores: preto `#0B0B0B`, off-white `#F4F4EE` e verde limão `#C8FF00`.
-- **Nenhum canto arredondado.** Tudo é quadrado, com bordas grossas de 3 px e sombras duras deslocadas.
-- Tipografia enorme: **Anton** nos títulos, **Space Mono** nos rótulos e **Archivo** no texto corrido.
-- Faixas inclinadas que se cruzam, números gigantes, texto vazado ao fundo e um selo quadrado girando.
-- Componentes próprios no lugar dos elementos nativos do navegador: botões, seletor de idioma, seletor de envio, campos de formulário, barra de rolagem e cursor.
+- A three color palette: black `#0B0B0B`, off-white `#F4F4EE` and lime green `#C8FF00`.
+- **No rounded corners at all.** Everything is square, with 3 px borders and hard offset shadows.
+- Oversized typography: **Anton** for headings, **Space Mono** for labels and **Archivo** for body text.
+- Crossing slanted bands, huge numbers, outlined ghost text in the background and a spinning square badge.
+- Custom components instead of the browser defaults: buttons, language switch, send method switch, form fields, scrollbar and cursor.
 
-## Recursos
+## Features
 
-- **Tela de carregamento** com contador de 000 a 100 e cortinas quadradas que sobem.
-- **Hero animado**: letras do nome que sobem uma a uma, parallax com o mouse e com a rolagem.
-- **Seção Sobre** com a frase principal que acende palavra por palavra e números que contam até o valor final.
-- **Arsenal** com 67 tecnologias em quadrados, separadas por categoria, com logos SVG locais.
-- **Projetos** com rolagem horizontal fixada na tela (em telas largas) e arte geométrica própria em cada cartão.
-- **Status dos projetos em tempo real**: cada cartão mostra se o site está no ar, com o tempo de resposta.
-- **Trajetória** com linhas que se desenham na rolagem, formação e idiomas.
-- **Contato** com e-mail, WhatsApp, LinkedIn, GitHub e um formulário com seletor de envio por **e-mail** ou **WhatsApp**.
-- **Três idiomas**: português, inglês e espanhol, com a escolha salva no navegador.
-- Cursor quadrado personalizado (só em dispositivos com mouse), barra de progresso da página e relógio de Toledo no rodapé.
-- Respeita `prefers-reduced-motion`: quem pede menos movimento recebe o site sem animações.
+- **Preloader** with a 000 to 100 counter and square curtains that slide up.
+- **Animated hero**: the letters of the name rise one by one, with mouse and scroll parallax.
+- **About section** where the main sentence lights up word by word and numbers count up to their final value.
+- **Arsenal**: 67 technologies shown as squares, grouped by category, with local SVG logos.
+- **Projects** shown as a horizontal scroll pinned to the screen (on wide screens), each card with its own geometric artwork.
+- **Live project status**: each card shows whether the site is online and how fast it answered.
+- **Journey** with lines that draw themselves on scroll, plus education and languages.
+- **Contact** with email, WhatsApp, LinkedIn, GitHub and a form that sends by **email** or by **WhatsApp**.
+- **Three languages**: Portuguese, English and Spanish, and the choice is remembered in the browser.
+- Square custom cursor (mouse devices only), page progress bar and a live clock for Toledo in the footer.
+- Respects `prefers-reduced-motion`: visitors who ask for less motion get the site without animations.
 
-## Tecnologias
+## Tech stack
 
-| Área | O que é usado |
+| Area | What is used |
 | --- | --- |
-| Framework | Next.js 16 (App Router, Turbopack, Cache Components) e React 19 |
-| Linguagem | TypeScript |
-| Animação | GSAP com ScrollTrigger (cenas e rolagem) e Motion (estado e componentes) |
-| Estilo | CSS puro com variáveis de design, sem biblioteca de componentes |
-| Fontes | Anton, Space Mono e Archivo, carregadas com `next/font` |
-| Ícones | Caminhos SVG locais do projeto simple-icons |
-| Qualidade | ESLint e verificação de tipos do TypeScript |
-| Contêiner | Dockerfile com saída `standalone` |
+| Framework | Next.js 16 (App Router, Turbopack, Cache Components) and React 19 |
+| Language | TypeScript |
+| Animation | GSAP with ScrollTrigger (scenes and scrolling) and Motion (state and components) |
+| Styling | Plain CSS with design tokens, no component library |
+| Fonts | Anton, Space Mono and Archivo, loaded with `next/font` |
+| Icons | Local SVG paths from the simple-icons project |
+| Quality | ESLint and TypeScript type checking |
+| Container | Dockerfile using the `standalone` output |
 
-## Estrutura do projeto
+## Project structure
 
 ```text
 .
-├── public/                  arquivos estáticos
+├── public/                  static files (link preview image)
 ├── src/
 │   ├── app/
-│   │   ├── api/status/      rota que verifica se os projetos estão no ar
-│   │   ├── globals.css      tokens de design e estilo de todos os componentes
-│   │   ├── icon.svg         favicon (símbolo </>)
-│   │   ├── layout.tsx       fontes, metadados e layout raiz
-│   │   └── page.tsx         página única
+│   │   ├── api/status/      route that checks whether the projects are online
+│   │   ├── globals.css      design tokens and the styles of every component
+│   │   ├── icon.svg         favicon (the </> mark)
+│   │   ├── layout.tsx       fonts, metadata and root layout
+│   │   └── page.tsx         the single page
 │   ├── components/
-│   │   ├── Portfolio.tsx    junta tudo e controla idioma e carregamento
-│   │   ├── Chrome.tsx       tela de carregamento, cursor e barra de progresso
-│   │   ├── Header.tsx       cabeçalho, seletor de idioma e menu em tela cheia
-│   │   ├── Hero.tsx         abertura com nome gigante e faixas
-│   │   ├── About.tsx        seção Sobre e números
-│   │   ├── Stack.tsx        Arsenal de tecnologias
-│   │   ├── Projects.tsx     projetos com rolagem horizontal e status
-│   │   ├── Journey.tsx      trajetória, formação e idiomas
-│   │   ├── Contact.tsx      contato e formulário
-│   │   ├── Footer.tsx       rodapé com relógio
-│   │   └── ui.tsx           botão quadrado, ícones, letras e faixas
-│   └── lib/
-│       ├── content.ts       todo o conteúdo em pt, en e es
-│       ├── icons.ts         caminhos SVG das tecnologias
-│       └── gsap.ts          registro único dos plugins do GSAP
-├── Dockerfile               imagem de produção
-├── .env.example             modelo das variáveis de ambiente
-└── next.config.ts           configuração do Next.js
+│   │   ├── Portfolio.tsx    puts everything together, handles language and loading
+│   │   ├── Chrome.tsx       preloader, cursor and progress bar
+│   │   ├── Header.tsx       header, language switch and full screen menu
+│   │   ├── Hero.tsx         opening with the giant name and bands
+│   │   ├── About.tsx        About section and numbers
+│   │   ├── Stack.tsx        Arsenal of technologies
+│   │   ├── Projects.tsx     projects with horizontal scroll and live status
+│   │   ├── Journey.tsx      career path, education and languages
+│   │   ├── Contact.tsx      contact section and form
+│   │   ├── Footer.tsx       footer with the clock
+│   │   └── ui.tsx           square button, icons, letters and bands
+│   ├── lib/
+│   │   ├── content.ts       all the content in pt, en and es
+│   │   ├── icons.ts         SVG paths of the technologies
+│   │   └── gsap.ts          single registration point for the GSAP plugins
+│   └── proxy.ts             answers 404 to bot probes that fake Server Actions
+├── Dockerfile               production image
+├── .env.example             template for the environment variables
+└── next.config.ts           Next.js configuration
 ```
 
-## Como rodar
+## Getting started
 
-Requisitos: **Node.js 20 ou superior** e **npm**.
+Requirements: **Node.js 20 or newer** and **npm**.
 
 ```bash
 git clone https://github.com/felipeestreladev/portfolio.git
@@ -103,70 +104,77 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Depois abra `http://localhost:3000`.
+Then open `http://localhost:3000`.
 
-## Variáveis de ambiente
+## Environment variables
 
-| Variável | Obrigatória | Para que serve |
+| Variable | Required | What it does |
 | --- | --- | --- |
-| `NEXT_PUBLIC_CONTACT_EMAIL` | Não, mas recomendada | E-mail exibido na seção de contato e usado no formulário. Sem ela, a seção mostra um aviso no lugar do e-mail. |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | No, but recommended | Email shown in the contact section and used by the form. Without it, the section shows a notice instead of the address. |
 
-O e-mail **não** fica dentro do código. Como a variável começa com `NEXT_PUBLIC_`, ela é incluída no resultado do build, então defina o valor **antes** de gerar o build ou a imagem.
+The email is **not** hard coded. Because the variable starts with `NEXT_PUBLIC_`, it is baked into the build output, so set the value **before** building the app or the image.
 
 ## Scripts
 
-| Comando | O que faz |
+| Command | What it does |
 | --- | --- |
-| `npm run dev` | Servidor de desenvolvimento |
-| `npm run build` | Build de produção (`standalone`) |
-| `npm run start` | Servidor de produção, depois do build |
-| `npm run lint` | Verifica o código com o ESLint |
+| `npm run dev` | Development server |
+| `npm run build` | Production build (`standalone`) |
+| `npm run start` | Production server, after the build |
+| `npm run lint` | Lints the code with ESLint |
 
-## Como funciona por dentro
+## How it works
 
-**Conteúdo em um só lugar.** Todo o texto do site vive em `src/lib/content.ts`, em três dicionários (`pt`, `en` e `es`) com o mesmo formato. O TypeScript garante que um idioma não fique sem uma chave que os outros têm.
+**Content lives in one place.** All the text of the site is in `src/lib/content.ts`, in three dictionaries (`pt`, `en` and `es`) with the same shape. TypeScript makes sure no language misses a key that the others have.
 
-**Idioma salvo no navegador.** A escolha é guardada no `localStorage` e lida com `useSyncExternalStore`, sem quebrar se o armazenamento estiver bloqueado (janela privada, por exemplo).
+**Language is saved in the browser.** The choice is stored in `localStorage` and read with `useSyncExternalStore`. It keeps working if storage is blocked, for example in a private window.
 
-**Status dos projetos.** A rota `GET /api/status` consulta, do lado do servidor, cada endereço da lista de projetos com limite de 7 segundos. Qualquer resposta abaixo de 500 conta como "no ar". O navegador repete a consulta a cada minuto. A lista de endereços é fixa e vem do próprio conteúdo, então o visitante não consegue pedir a verificação de um endereço qualquer.
+**Project status.** `GET /api/status` runs on the server and requests each project URL with a 7 second timeout. Any answer below HTTP 500 counts as online. The browser repeats the check every minute. The URL list is fixed and comes from the content file, so a visitor cannot make the server request an arbitrary address.
 
-**Formulário de contato.** O site não tem servidor de envio. O seletor escolhe o destino:
-- **E-mail**: monta um `mailto:` com assunto e corpo e abre o programa de e-mail do visitante. Pede nome, e-mail e mensagem.
-- **WhatsApp**: abre `wa.me` com a mensagem pronta numa nova aba. O e-mail do visitante não é necessário, então o campo some.
+**Contact form.** The site has no mail server. The send method switch picks where the message goes:
+- **Email**: builds a `mailto:` link with subject and body and opens the visitor's mail app. It asks for name, email and message.
+- **WhatsApp**: opens `wa.me` in a new tab with the message ready. The visitor's email is not needed, so that field disappears.
 
-**Animações.** O GSAP cuida do que depende de rolagem ou de linha do tempo (abertura, parallax, contagem de números, rolagem horizontal dos projetos). O Motion cuida do que depende do estado dos componentes (menu, seletores, campos, entrada dos quadrados). Só `transform` e `opacity` são animados, para não forçar recálculo de layout. As animações de rolagem usam `gsap.matchMedia()`, que também desliga tudo para quem prefere menos movimento.
+In both cases the message starts with a greeting that includes the visitor's name, in the language of the site.
 
-## Personalização
+**Email is rendered after hydration.** The address is only added to the page in the browser. If it were in the server HTML, email obfuscation features such as Cloudflare's would rewrite it and React would report a hydration mismatch in the console.
 
-- **Textos, projetos, experiência e tecnologias**: edite `src/lib/content.ts`.
-- **Cores, bordas e medidas**: as variáveis ficam no começo de `src/app/globals.css`.
-- **Novo ícone de tecnologia**: adicione o caminho SVG em `src/lib/icons.ts` com o mesmo nome usado no conteúdo. Sem ícone, o quadrado mostra as duas primeiras letras.
-- **Novo projeto**: acrescente o item nos três idiomas. A rota de status passa a verificá-lo sozinha.
+**Bot probes.** The site does not use Server Actions. Scanners that send fake requests with a `next-action` header get a `404` from `src/proxy.ts`, which keeps the server logs clean.
 
-## Publicação
+**Animation.** GSAP handles anything tied to scroll or to a timeline (the opening, parallax, number counters and the horizontal scroll of the projects). Motion handles anything tied to component state (the menu, switches, fields and the entrance of the squares). Only `transform` and `opacity` are animated, so the browser does not recalculate layout. Scroll animations use `gsap.matchMedia()`, which also switches everything off for visitors who prefer reduced motion. The pinned projects section is measured again whenever the layout changes (fonts, status text, resizes), so it never ends up in the wrong place.
 
-O projeto gera uma saída `standalone` e inclui um `Dockerfile`:
+## Customizing
+
+- **Text, projects, experience and technologies**: edit `src/lib/content.ts`.
+- **Colors, borders and sizes**: the variables are at the top of `src/app/globals.css`.
+- **A new technology icon**: add the SVG path to `src/lib/icons.ts` using the same name as in the content. Without an icon, the square shows the first two letters.
+- **A new project**: add the item in the three languages. The status route starts checking it on its own.
+- **Link preview image**: replace `public/og.png` (1200 by 630). It is what WhatsApp, Discord and social networks show when the link is shared.
+
+## Deployment
+
+The project builds a `standalone` output and includes a `Dockerfile`:
 
 ```bash
-docker build --build-arg NEXT_PUBLIC_CONTACT_EMAIL=seu@email.com -t portfolio .
+docker build --build-arg NEXT_PUBLIC_CONTACT_EMAIL=you@example.com -t portfolio .
 docker run -p 3000:3000 portfolio
 ```
 
-Como a rota `/api/status` roda no servidor, o site precisa de um ambiente com Node.js (contêiner, VPS ou plataforma com suporte ao Next.js). Hospedagem apenas de arquivos estáticos não executa essa rota.
+Because `/api/status` runs on the server, the site needs a Node.js environment (a container, a VPS or a platform that supports Next.js). Plain static hosting cannot run that route.
 
-## Acessibilidade e desempenho
+## Accessibility and performance
 
-- Link "pular para o conteúdo" e `lang` da página atualizado conforme o idioma.
-- Elementos interativos com papéis ARIA, navegação por teclado e foco visível desenhado.
-- Campos de formulário com rótulo, mensagem de erro anunciada e estado de foco próprio.
-- Menu em tela cheia que fecha com a tecla `Esc`.
-- Animações desligadas para quem usa `prefers-reduced-motion`.
-- Ícones em SVG inline, sem requisições extras, e fontes carregadas pelo `next/font`.
+- "Skip to content" link, and the page `lang` follows the selected language.
+- Interactive elements have ARIA roles, keyboard support and a visible custom focus state.
+- Form fields have labels, announced error messages and their own focus style.
+- The full screen menu closes with the `Esc` key.
+- Animations are turned off for visitors with `prefers-reduced-motion`.
+- Icons are inline SVG with no extra requests, and fonts are loaded through `next/font`.
 
-## Licença e contato
+## License and contact
 
-O código está público para consulta. Todos os direitos reservados: se quiser reutilizar alguma parte, fale comigo antes.
+The code is public for reading. All rights reserved: if you want to reuse any part of it, please talk to me first.
 
 - LinkedIn: [linkedin.com/in/felipe-gte](https://www.linkedin.com/in/felipe-gte)
 - GitHub: [github.com/felipeestreladev](https://github.com/felipeestreladev)
-- Site: [felipeestrela.com.br](https://felipeestrela.com.br)
+- Website: [felipeestrela.com.br](https://felipeestrela.com.br)
