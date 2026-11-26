@@ -1,6 +1,6 @@
 # Portfólio de Felipe Estrela
 
-Portfólio pessoal de **Felipe Estrela**, desenvolvedor backend de Toledo, Paraná, Brasil. Um site de página única em **Next.js**, com visual brutalista em preto, off-white e verde limão, tipografia gigante, ângulos retos em tudo e animações com **GSAP** e **Motion**.
+Portfólio pessoal de **Felipe Estrela**, desenvolvedor full stack de Toledo, Paraná, Brasil. Um site de página única em **Next.js**, com visual brutalista em preto, off-white e verde limão, tipografia gigante, ângulos retos em tudo e animações com **GSAP** e **Motion**.
 
 Pensado para rodar em [felipeestrela.com.br](https://felipeestrela.com.br).
 

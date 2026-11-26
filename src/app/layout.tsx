@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "/",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Felipe Estrela, Backend Developer" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Felipe Estrela, Full Stack Developer" }],
   },
   twitter: {
     card: "summary_large_image",

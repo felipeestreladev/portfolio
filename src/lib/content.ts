@@ -10,9 +10,9 @@ export const LINKS = {
 
 const pt = {
   meta: {
-    title: "Felipe Estrela | Desenvolvedor Backend",
+    title: "Felipe Estrela | Desenvolvedor Full Stack",
     description:
-      "Portfólio de Felipe Estrela, desenvolvedor backend de Toledo, PR. Node.js, TypeScript, Next.js e automações com IA.",
+      "Portfólio de Felipe Estrela, desenvolvedor full stack de Toledo, PR. Node.js, TypeScript, Next.js e automações com IA.",
   },
   skip: "Pular para o conteúdo",
   preloader: "Carregando portfólio",
@@ -26,7 +26,7 @@ const pt = {
     close: "Fechar",
   },
   hero: {
-    eyebrow: "Desenvolvedor backend",
+    eyebrow: "Desenvolvedor full stack",
     base: "Toledo, PR, Brasil",
     role: "Node.js, TypeScript e automações com IA que aguentam produção.",
     ctaProjects: "Ver projetos",
@@ -186,9 +186,9 @@ export type Dict = typeof pt;
 
 const en: Dict = {
   meta: {
-    title: "Felipe Estrela | Backend Developer",
+    title: "Felipe Estrela | Full Stack Developer",
     description:
-      "Portfolio of Felipe Estrela, backend developer from Toledo, Brazil. Node.js, TypeScript, Next.js and AI automation.",
+      "Portfolio of Felipe Estrela, full stack developer from Toledo, Brazil. Node.js, TypeScript, Next.js and AI automation.",
   },
   skip: "Skip to content",
   preloader: "Loading portfolio",
@@ -202,7 +202,7 @@ const en: Dict = {
     close: "Close",
   },
   hero: {
-    eyebrow: "Backend developer",
+    eyebrow: "Full stack developer",
     base: "Toledo, PR, Brazil",
     role: "Node.js, TypeScript and AI automation built to survive production.",
     ctaProjects: "See projects",
@@ -360,9 +360,9 @@ const en: Dict = {
 
 const es: Dict = {
   meta: {
-    title: "Felipe Estrela | Desarrollador Backend",
+    title: "Felipe Estrela | Desarrollador Full Stack",
     description:
-      "Portafolio de Felipe Estrela, desarrollador backend de Toledo, Brasil. Node.js, TypeScript, Next.js y automatizaciones con IA.",
+      "Portafolio de Felipe Estrela, desarrollador full stack de Toledo, Brasil. Node.js, TypeScript, Next.js y automatizaciones con IA.",
   },
   skip: "Saltar al contenido",
   preloader: "Cargando portafolio",
@@ -376,7 +376,7 @@ const es: Dict = {
     close: "Cerrar",
   },
   hero: {
-    eyebrow: "Desarrollador backend",
+    eyebrow: "Desarrollador full stack",
     base: "Toledo, PR, Brasil",
     role: "Node.js, TypeScript y automatizaciones con IA hechas para aguantar producción.",
     ctaProjects: "Ver proyectos",
