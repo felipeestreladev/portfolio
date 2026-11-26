@@ -88,7 +88,6 @@ export function Hero({ t, ready }: { t: Dict; ready: boolean }) {
         <i className="hero__sq hero__sq--1" />
         <i className="hero__sq hero__sq--2" />
         <i className="hero__sq hero__sq--3" />
-        <i className="hero__sq hero__sq--4" />
       </div>
 
       <div className="hero__top mono">

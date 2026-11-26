@@ -1,10 +1,19 @@
 "use client";
 
-import { useId, useRef, useState } from "react";
+import { useId, useRef, useState, useSyncExternalStore } from "react";
 import { AnimatePresence, LayoutGroup, motion } from "motion/react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { LINKS, type Dict } from "@/lib/content";
 import { ArrowIcon, SquareButton, TechIcon } from "./ui";
+
+/**
+ * O e-mail so entra no HTML depois da hidratacao. Se ele viesse no HTML do servidor, o Cloudflare
+ * (ofuscacao de e-mail) trocaria o texto por "[email protected]" e o React acusaria erro de hidratacao.
+ */
+const noopSubscribe = () => () => {};
+function useEmail() {
+  return useSyncExternalStore(noopSubscribe, () => LINKS.email, () => "");
+}
 
 type FieldProps = {
   label: string;
@@ -61,6 +70,8 @@ function Field({ label, value, onChange, error, multiline, type = "text", autoCo
 }
 
 export function Contact({ t }: { t: Dict }) {
+  const siteEmail = useEmail();
+  const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false);
   const root = useRef<HTMLElement>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -138,9 +149,9 @@ export function Contact({ t }: { t: Dict }) {
           <div className="contact__side">
             <p className="contact__text">{t.contact.text}</p>
 
-            {LINKS.email ? (
-              <a className="contact__mail display" href={`mailto:${LINKS.email}`} data-cursor>
-                <span className="contact__mail-txt">{LINKS.email}</span>
+            {siteEmail || !hydrated ? (
+              <a className="contact__mail display" href={siteEmail ? `mailto:${siteEmail}` : "#contato"} data-cursor>
+                <span className="contact__mail-txt">{siteEmail || "········"}</span>
                 <ArrowIcon className="contact__mail-icon" />
               </a>
             ) : (

@@ -589,14 +589,12 @@ body.has-cursor * {
   border: var(--bw) solid var(--lime);
 }
 .hero__sq--2 {
-  top: 11%;
-  left: 56%;
-  width: 44px;
-  height: 44px;
-  background: var(--lime);
+  display: none; /* no desktop ele cai em cima das letras do nome */
 }
 @media (max-width: 700px) {
   .hero__sq--2 {
+    display: block;
+    background: var(--lime);
     top: auto;
     bottom: 34%;
     left: auto;
@@ -611,13 +609,6 @@ body.has-cursor * {
   width: 62px;
   height: 62px;
   border: var(--bw) solid var(--white);
-}
-.hero__sq--4 {
-  top: 16%;
-  left: 34%;
-  width: 24px;
-  height: 24px;
-  background: var(--white);
 }
 .hero__top {
   position: relative;
