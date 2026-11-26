@@ -82,10 +82,10 @@ export function Cursor() {
     if (!b || !d) return;
     document.body.classList.add("has-cursor");
 
-    const bx = gsap.quickTo(b, "x", { duration: 0.45, ease: "power3" });
-    const by = gsap.quickTo(b, "y", { duration: 0.45, ease: "power3" });
-    const dx = gsap.quickTo(d, "x", { duration: 0.08, ease: "none" });
-    const dy = gsap.quickTo(d, "y", { duration: 0.08, ease: "none" });
+    const bx = gsap.quickTo(b, "x", { duration: 0.1, ease: "power2.out" });
+    const by = gsap.quickTo(b, "y", { duration: 0.1, ease: "power2.out" });
+    const dx = gsap.quickTo(d, "x", { duration: 0.01, ease: "none" });
+    const dy = gsap.quickTo(d, "y", { duration: 0.01, ease: "none" });
 
     const move = (e: PointerEvent) => {
       b.classList.add("is-on");
