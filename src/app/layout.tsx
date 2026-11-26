@@ -7,7 +7,7 @@ const display = Anton({ weight: "400", subsets: ["latin"], variable: "--font-dis
 const mono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"], variable: "--font-mono", display: "swap" });
 const body = Archivo({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
-// Previa de link (WhatsApp, Discord, etc.) sempre em ingles, com o banner de opengraph-image.tsx.
+// Previa de link (WhatsApp, Discord, etc.) sempre em ingles, com o banner estatico public/og.png.
 export const metadata: Metadata = {
   metadataBase: new URL("https://felipeestrela.com.br"),
   title: CONTENT.pt.meta.title,
@@ -20,9 +20,11 @@ export const metadata: Metadata = {
     url: "/",
     type: "website",
     locale: "en_US",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Felipe Estrela, Backend Developer" }],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og.png"],
     title: CONTENT.en.meta.title,
     description: CONTENT.en.meta.description,
   },
